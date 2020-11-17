@@ -1,0 +1,13 @@
+def g_prime():
+    target = 2
+    while True:
+        for i in range(2, target):
+            if divmod(target, i)[1] == 0:
+                break
+        else:
+            yield target
+        target += 1
+        
+a = g_prime()
+a.__next__()
+ 
